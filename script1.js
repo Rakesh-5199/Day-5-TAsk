@@ -57,3 +57,30 @@ const resume = {
     ]
   };
 console.log(resume);
+
+  // Using for loop
+console.log("Using for loop:");
+for (let i = 0; i < Object.keys(resume).length; i++) {
+  const key = Object.keys(resume)[i];
+  const value = resume[key];
+  console.log(${key}: ${JSON.stringify(value)});
+}
+
+// Using for...in loop
+console.log("\nUsing for...in loop:");
+for (const key in resume) {
+  const value = resume[key];
+  console.log(${key}: ${JSON.stringify(value)});
+}
+
+// Using for...of loop
+console.log("\nUsing for...of loop:");
+for (const [key, value] of Object.entries(resume)) {
+  console.log(${key}: ${JSON.stringify(value)});
+}
+
+// Using forEach loop 
+console.log("\nUsing forEach loop for arrays:");
+resume.skills.forEach(skill => {
+  console.log(Skill: ${skill});
+});
